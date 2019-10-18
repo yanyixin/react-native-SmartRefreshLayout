@@ -1,7 +1,7 @@
 {
-  "name": "react-native-smartrefreshlayout",
+  "name": "@y-fe/react-native-smartrefreshlayout",
   "version": "0.6.7",
-  "description": "基于android SmartRefreshLayout的封装",
+  "description": "基于android SmartRefreshLayout的封装，增加 beginRefresh 方法",
   "main": "index.js",
   "scripts": {
     "test": "npm test"

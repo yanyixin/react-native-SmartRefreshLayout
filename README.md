@@ -20,27 +20,27 @@
 工程目录下运行:
 <br>
 ```bash
-npm install --save react-native-smartrefreshlayout
+npm install --save @y-fe/react-native-smartrefreshlayout
 ```
 
 or (已经安装了yarn)
 <br>
 
 ```bash
-yarn add react-native-smartrefreshlayout
+yarn add @y-fe/react-native-smartrefreshlayout
 ```
 
 
 #### 第二步
 工程目录下运行:<br>
 ```bash
-react-native link react-native-smartrefreshlayout
+react-native link @y-fe/react-native-smartrefreshlayout
 ```
 
 ## 使用
 在工程中导入：
 ```js
-import {SmartRefreshControl,DefaultHeader} from 'react-native-smartrefreshlayout';
+import {SmartRefreshControl,DefaultHeader} from '@y-fe/react-native-smartrefreshlayout';
 //使用方法和RN官方的RefreshControl类似，
             <ScrollView
                 refreshControl={<SmartRefreshControl
@@ -289,6 +289,12 @@ header移动过程中触发,包括下拉过程和释放过程。
 | function | No       |
 
 ### Methods
+
+#### `beginRefresh`
+
+```javascript
+   beginRefresh();
+```
 
 #### `finishRefresh`
 

@@ -43,6 +43,9 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
     private static final String COMMAND_FINISH_REFRESH_NAME="finishRefresh";
     private static final int COMMAND_FINISH_REFRESH_ID=0;
 
+    private static final String COMMAND_BEGIN_REFRESH_NAME="beginRefresh";
+    private static final int COMMAND_BEGIN_REFRESH_ID=1;
+
     @Override
     public String getName() {
         return REACT_CLASS;
@@ -70,7 +73,8 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
     @Override
     public Map<String, Integer> getCommandsMap() {
         return MapBuilder.of(
-                COMMAND_FINISH_REFRESH_NAME,COMMAND_FINISH_REFRESH_ID
+                COMMAND_FINISH_REFRESH_NAME,COMMAND_FINISH_REFRESH_ID,
+                COMMAND_BEGIN_REFRESH_NAME,COMMAND_BEGIN_REFRESH_ID
         );
     }
     /**
@@ -182,6 +186,12 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
                 }else{
                     root.finishRefresh(success);
                 }
+                break;
+            case COMMAND_BEGIN_REFRESH_ID:
+                int delay=args.getInt(0);
+                int duration=args.getInt(1);
+                int dragRate=args.getInt(2);
+                root.autoRefresh(delay, duration, dragRate);
                 break;
             default:break;
         }
