@@ -2,8 +2,8 @@ package com.lmy.header;
 
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.annotation.ColorInt;
-import android.support.annotation.NonNull;
+import androidx.annotation.ColorInt;
+import androidx.annotation.NonNull;
 import android.view.View;
 
 import com.facebook.react.views.view.ReactViewGroup;
